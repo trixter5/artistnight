@@ -4,7 +4,7 @@
  <main class="w-section main">
       <div class="content content_simple">
         <div class="article_heading">
-          <h1 class="article_heading--h1"><span class="red bold">вопросы?</span> ответы</h1>
+          <h1 class="article_heading--h1">отзывы</h1>
         </div>
         <div class="blog">
           <div class="blog_item">
