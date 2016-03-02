@@ -2,7 +2,7 @@
     <div class="w-container">
       <nav class="footer_nav">
         <ul class="w-list-unstyled footernav_list">
-          <li class="footernav_li"><a href="#" class="footernav_link">О проекте</a>
+          <li class="footernav_li"><a href="about.php" class="footernav_link">О проекте</a>
           </li>
           <li class="footernav_li"><a href="feed.php" class="footernav_link">Отзывы</a>
           </li>
