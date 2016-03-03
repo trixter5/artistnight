@@ -233,7 +233,7 @@ a {
   text-align: center;
 }
 
-.footernav_link {
+.footernav_link, .footer_nav li a {
   color: #464646;
   font-size: 13px;
   text-decoration: none;
@@ -512,7 +512,7 @@ a {
   clear: both;
 }
 
-.press_introtext--par {
+.press_introtext--par, .press_introtext > p {
   margin-bottom: 0px;
   padding-left: 0px;
   color: #3e3e3e;
@@ -585,7 +585,9 @@ a {
   font-size: 20px;
   text-transform: uppercase;
 }
-
+.blog_intro p{
+	padding-left: 0;
+}
 .blog_intro--par {
   padding-left: 0px;
   color: #313131;
@@ -1114,3 +1116,6 @@ a {
   
 }
 
+.post-navigation{
+	display: none;	
+}
