@@ -730,21 +730,22 @@ a {
 }
 
 .gift_text--h1 {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   color: #fff;
   font-size: 43px;
   text-transform: uppercase;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, .24);
 }
 
 .gift_text--h2 {
   border-left-style: none;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Proxima Nova Rg';
   color: #fff;
   font-size: 36px;
   font-weight: 400;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, .24);
 }
 
-.button {
+.button--buy {
   min-width: 265px;
   padding-top: 17px;
   padding-bottom: 17px;
@@ -753,7 +754,7 @@ a {
   text-align: center;
 }
 
-.button.gift_btn {
+.button--buy.gift_btn {
   margin-top: 20px;
   float: right;
 }
