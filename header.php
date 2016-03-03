@@ -24,7 +24,7 @@
             </a>
           </div>
           <div class="w-col w-col-7 w-col-small-4 topnav_col">
-            <nav role="navigation" class="w-nav-menu topnav_menu"><a href="#" class="w-nav-link menu_link">Мeроприятия</a><a href="#" class="w-nav-link menu_link">Фотографии</a><a href="#" class="w-nav-link menu_link">Корпоративы</a><a href="#" class="w-nav-link menu_link">Подарочные карты</a><a href="#" class="w-nav-link menu_link">Контакты</a>
+            <nav role="navigation" class="w-nav-menu topnav_menu"><a href="#" class="w-nav-link menu_link">Мeроприятия</a><a href="#" class="w-nav-link menu_link">Фотографии</a><a href="#" class="w-nav-link menu_link">Корпоративы</a><a href="gift.php" class="w-nav-link menu_link">Подарочные карты</a><a href="#" class="w-nav-link menu_link">Контакты</a>
             </nav>
           </div>
           <div class="w-col w-col-3 w-col-small-4 w-hidden-tiny">
