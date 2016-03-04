@@ -37,6 +37,28 @@
     </div>
   </footer>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+   <script>
+  $(function() {
+    $( "#DataFrom" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#DataTo" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#DataTo" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#DataFrom" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+  });
+  </script>
   
 </body>
 </html>

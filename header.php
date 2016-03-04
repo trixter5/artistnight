@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/base.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript" src="js/modernizr.js"></script>
   <link href='https://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet' type='text/css' />
@@ -24,7 +25,7 @@
             </a>
           </div>
           <div class="w-col w-col-7 w-col-small-4 topnav_col">
-            <nav role="navigation" class="w-nav-menu topnav_menu"><a href="#" class="w-nav-link menu_link">Мeроприятия</a><a href="#" class="w-nav-link menu_link">Фотографии</a><a href="corp.php" class="w-nav-link menu_link">Корпоративы</a><a href="gift.php" class="w-nav-link menu_link">Подарочные карты</a><a href="#" class="w-nav-link menu_link">Контакты</a>
+            <nav role="navigation" class="w-nav-menu topnav_menu"><a href="events.php" class="w-nav-link menu_link">Мeроприятия</a><a href="#" class="w-nav-link menu_link">Фотографии</a><a href="corp.php" class="w-nav-link menu_link">Корпоративы</a><a href="gift.php" class="w-nav-link menu_link">Подарочные карты</a><a href="#" class="w-nav-link menu_link">Контакты</a>
             </nav>
           </div>
           <div class="w-col w-col-3 w-col-small-4 w-hidden-tiny">
