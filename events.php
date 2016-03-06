@@ -37,7 +37,7 @@
           <div class="w-row events_row">
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
-                <a href="#" class="w-inline-block event_infolink">
+                <a href="event.php" class="w-inline-block event_infolink">
                   <div class="w-clearfix event_info">
                     <div class="event_head">
                       <h3 class="event_head--h3">Зима близко</h3>
@@ -65,7 +65,7 @@
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
-                <a href="#" class="w-inline-block event_infolink">
+                <a href="event.php" class="w-inline-block event_infolink">
                   <div class="w-clearfix event_info">
                     <div class="event_head">
                       <h3 class="event_head--h3">Зима близко</h3>
@@ -93,7 +93,7 @@
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
-                <a href="#" class="w-inline-block event_infolink">
+                <a href="event.php" class="w-inline-block event_infolink">
                   <div class="w-clearfix event_info">
                     <div class="event_head">
                       <h3 class="event_head--h3">Зима близко</h3>
@@ -121,7 +121,7 @@
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
-                <a href="#" class="w-inline-block event_infolink">
+                <a href="event.php" class="w-inline-block event_infolink">
                   <div class="w-clearfix event_info">
                     <div class="event_head">
                       <h3 class="event_head--h3">Зима близко</h3>
@@ -151,7 +151,7 @@
           <div class="w-row events_row">
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
-                <a href="#" class="w-inline-block event_infolink">
+                <a href="event.php" class="w-inline-block event_infolink">
                   <div class="w-clearfix event_info">
                     <div class="event_head">
                       <h3 class="event_head--h3">Зима близко</h3>
@@ -179,7 +179,7 @@
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
-                <a href="#" class="w-inline-block event_infolink">
+                <a href="event.php" class="w-inline-block event_infolink">
                   <div class="w-clearfix event_info">
                     <div class="event_head">
                       <h3 class="event_head--h3">Зима близко</h3>
@@ -207,7 +207,7 @@
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
-                <a href="#" class="w-inline-block event_infolink">
+                <a href="event.php" class="w-inline-block event_infolink">
                   <div class="w-clearfix event_info">
                     <div class="event_head">
                       <h3 class="event_head--h3">Зима близко</h3>
@@ -235,7 +235,7 @@
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
-                <a href="#" class="w-inline-block event_infolink">
+                <a href="event.php" class="w-inline-block event_infolink">
                   <div class="w-clearfix event_info">
                     <div class="event_head">
                       <h3 class="event_head--h3">Зима близко</h3>

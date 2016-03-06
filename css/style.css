@@ -67,8 +67,6 @@ h1 {
 h2 {
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-left: 5px;
-  border-left: 3px solid #cb142a;
   font-size: 32px;
   line-height: 36px;
   font-weight: 700;
@@ -274,11 +272,11 @@ a {
   border-right-style: none;
 }
 
-.footer_social i {
+.footer_social i, .eventpage_share--el i {
     color: #464646;
 }
 
-.footer_social a:hover i {
+.footer_social a:hover i, .eventpage_share--el:hover i {
     color: #b23232;
 }
 
@@ -597,6 +595,15 @@ a {
   text-align: center;
 }
 
+.button {
+  min-width: 265px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  background-color: #b23232;
+  font-size: 15px;
+  text-align: center;
+}
+
 .loadmore_button {
   display: block;
   width: 185px;
@@ -608,7 +615,7 @@ a {
   font-family: 'Fira Sans', sans-serif;
   color: #1b1b1b;
   font-size: 13px;
-  line-height: 25px;
+  line-height: 100%;
   text-transform: uppercase;
 }
 
@@ -861,6 +868,7 @@ a {
   color: #fff;
   font-size: 13px;
   text-transform: uppercase;
+  line-height: 100%;
 }
 
 .filter_submit:hover {
@@ -923,6 +931,7 @@ select::-ms-expand {
 .event {
   max-height: 440px;
   font-size: 1em;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, .29);
 }
 
 .event_info {
@@ -1074,6 +1083,198 @@ div#ui-datepicker-div a {
    width: auto;
 }
 
+.eventpage_info {
+  padding: 35px;
+  background-color: #f6f6f6;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .29);
+  color: #33362d;
+}
+
+.eventpage_head {
+  margin-bottom: 35px;
+}
+
+.eventpage_head--h1 {
+  margin-bottom: 0px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  color: #0d0d0d;
+  font-size: 21px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.eventpage_head--date {
+  color: dimgrey;
+  font-size: 13px;
+}
+
+.eventpage_fullimg {
+  margin-bottom: 40px;
+}
+
+.eventpage_fullimg--img {
+  width: 100%;
+}
+
+.eventpage_fulltext--h2 {
+  margin-bottom: 25px;
+  padding-left: 0px;
+  border-left-style: none;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.eventpage_fulltext--p {
+  margin-bottom: 15px;
+  padding-left: 0px;
+  color: #33362d;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.eventpage_share {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.eventpage_share--text {
+  display: inline-block;
+  font-size: 13px;
+}
+
+.eventpage_share--el {
+  display: inline-block;
+  margin-left: 18px;
+  width: auto;
+}
+
+.event_buy {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .29);
+  text-align: center;
+}
+
+.eventbuy_price {
+  min-height: 65px;
+  padding-bottom: 0px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.eventbuy_price--text {
+  color: #b23232;
+  font-size: 26px;
+  line-height: 65px;
+  font-weight: 700;
+}
+
+.eventbuy_stock {
+  min-height: 65px;
+  line-height: 25px;
+}
+
+.eventbuy_stock--text {
+  color: #4a4949;
+  font-size: 14px;
+}
+
+.eventmap {
+  margin-bottom: 25px;
+}
+
+.eventmap_map {
+  max-height: 260px;
+}
+
+.event_position {
+  margin-bottom: 25px;
+  background-color: #f6f6f6;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .29);
+}
+
+.eventposition_logo {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #cbcbcb;
+  text-align: center;
+}
+
+.eventposition_address {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.eventposition_address--text {
+  color: #33362d;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.eventauthor {
+  padding: 35px 30px;
+  background-color: #f6f6f6;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .29);
+}
+
+.eventauthor_descr {
+  position: relative;
+  z-index: 1;
+}
+
+.eventauthor_descr--text {
+  padding-left: 0px;
+  color: #4a4949;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.eventauthor_more {
+  text-align: right;
+}
+
+.eventauthor_more--link {
+  width: auto;
+  color: #b23232;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.eventauthor_overlay {
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+  width: 100%;
+  height: 50%;
+  background-image: -webkit-linear-gradient(270deg, transparent, hsla(0, 0%, 96%, .67) 42%, #f6f6f6);
+  background-image: linear-gradient(180deg, transparent, hsla(0, 0%, 96%, .67) 42%, #f6f6f6);
+  line-height: 20px;
+}
+
+.eventbuy_row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.eventposition_wrapdesc {
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+}
+
+.eventbuy_stock--text20 {
+  font-size: 20px;
+}
+
+.button.checkout_button {
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 1180px) {
   .menu_link {
     padding-top: 30px;
@@ -1181,6 +1382,10 @@ div#ui-datepicker-div a {
     top: 0px;
     right: 0px;
     margin-right: 0px;
+  }
+   .button.checkout_button {
+    min-width: auto;
+    font-size: 14px;
   }
 }
 
@@ -1300,6 +1505,9 @@ div#ui-datepicker-div a {
     display: block;
     margin-right: auto;
     margin-left: auto;
+  }
+   .event_buy {
+    margin-top: 20px;
   }
 }
 
