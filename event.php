@@ -69,10 +69,10 @@
             <div class="eventauthor">
               <div class="w-clearfix event_author">
                 <div class="event_authorimgwrap">
-                  <a href="#" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
+                  <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
                   </a>
                 </div>
-                <div class="event_authorinfo"><a href="#" class="w-inline-block event_authorlink"><h4 class="event_authorname">Иванова марфа</h4></a>
+                <div class="event_authorinfo"><a href="author.php" class="w-inline-block event_authorlink"><h4 class="event_authorname">Иванова марфа</h4></a>
                   <div class="event_authortype">художник-анималист</div>
                   <div class="event_rait"></div>
                 </div>
