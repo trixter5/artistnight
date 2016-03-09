@@ -88,7 +88,7 @@
                     <div class="event_authortype">художник-анималист</div>
                     <div class="event_rait"></div>
                   </div>
-                </div><a href="#" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
+                </div><a href="check.php" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
               </div>
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
@@ -116,7 +116,7 @@
                     <div class="event_authortype">художник-анималист</div>
                     <div class="event_rait"></div>
                   </div>
-                </div><a href="#" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
+                </div><a href="check.php" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
               </div>
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
@@ -144,7 +144,7 @@
                     <div class="event_authortype">художник-анималист</div>
                     <div class="event_rait"></div>
                   </div>
-                </div><a href="#" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
+                </div><a href="check.php" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
               </div>
             </div>
           </div>
@@ -202,7 +202,7 @@
                     <div class="event_authortype">художник-анималист</div>
                     <div class="event_rait"></div>
                   </div>
-                </div><a href="#" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
+                </div><a href="check.php" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
               </div>
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
@@ -230,7 +230,7 @@
                     <div class="event_authortype">художник-анималист</div>
                     <div class="event_rait"></div>
                   </div>
-                </div><a href="#" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
+                </div><a href="check.php" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
               </div>
             </div>
             <div class="w-col w-col-3 w-col-medium-6">
@@ -258,7 +258,7 @@
                     <div class="event_authortype">художник-анималист</div>
                     <div class="event_rait"></div>
                   </div>
-                </div><a href="#" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
+                </div><a href="check.php" class="button  event_button">купить билет<br><em data-new-link="true" class="event_button--stock">осталось 13 билетов</em></a>
               </div>
             </div>
           </div>

@@ -51,7 +51,7 @@
                   </div>
                 </div>
               </div>
-              <div class="eventbuy_checkout"><a href="#" class="button checkout_button">Посетить мероприятие</a>
+              <div class="eventbuy_checkout"><a href="check.php" class="button checkout_button">Посетить мероприятие</a>
               </div>
             </div>
             <div class="event_position">
