@@ -247,10 +247,15 @@ a {
   margin-right: 25px;
 }
 
-.footernav_li.footernav_li--last {
+.footernav_li li:last-child{
   margin-right: 0px;
 }
-
+.footernav_li>a {
+    color: #464646;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
 .footer_social {
   margin-top: 73px;
   text-align: center;
