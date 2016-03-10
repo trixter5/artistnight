@@ -69,15 +69,16 @@ h2 {
   margin-bottom: 20px;
   font-size: 32px;
   line-height: 36px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 25px;
   line-height: 30px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -218,6 +219,11 @@ a {
 
 .menu_link:hover {
   border-bottom: 6px solid #be5758;
+}
+
+.w-nav-link.w--current {
+    color: #222;
+    border-bottom: 6px solid #be5758;
 }
 
 .topnav_container {
@@ -601,13 +607,23 @@ a {
   text-align: center;
 }
 
-.button,.request_form input[type="submit"] {
+.button {
   min-width: 265px;
   padding-top: 17px;
   padding-bottom: 17px;
   background-color: #b23232;
   font-size: 15px;
   text-align: center;
+}
+
+.button:hover {
+  background-color: #be5758;
+  outline: none;
+}
+
+.button:active {
+  box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, .2);
+  outline: none;
 }
 
 .loadmore_button {
@@ -627,10 +643,12 @@ a {
 
 .loadmore_button:hover {
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, .3);
+  background-color: #fff;
 }
 
 .loadmore_button:active {
   box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, .15);
+  background-color: #fff;
 }
 
 .blog_head {
@@ -959,7 +977,7 @@ select::-ms-expand {
   background-color: #f6f6f6;
 }
 
-.request_form input[type="submit"], .event_button {
+.event_button {
   display: block;
   width: 100%;
   max-height: 70px;
@@ -1524,10 +1542,11 @@ select::-ms-expand {
 }
 
 .check_forminput {
-      width: 100%;
+  width: 100%;
   height: 30px;
   margin-bottom: 15px;
   border: 1px solid #e0e0e0;
+  padding: 5px 15px;
 }
 
 .check_forminput:focus {
@@ -1599,20 +1618,14 @@ select::-ms-expand {
   font-weight: 400;
 }
 
-.request_form input[type="text"],.request_form input[type="email"]  {
+.request_input {
   width: 100%;
   height: 30px;
   margin-bottom: 15px;
   border: 1px solid #e0e0e0;
   padding: 5px 15px;
 }
-.request_form textarea{	
-	  width: 100%;
-  height: 130px;
-  margin-bottom: 15px;
-  border: 1px solid #e0e0e0;
-  padding: 5px 15px;
-}
+
 .request_submitwrap {
   clear: both;
   text-align: right;
@@ -1637,7 +1650,7 @@ select::-ms-expand {
   line-height: 15px;
 }
 
-.request_form input[type="submit"]  {
+.event_button.request_submit {
   width: 223px;
   height: 45px;
   max-height: auto;
@@ -1651,16 +1664,120 @@ select::-ms-expand {
   text-align: center;
 }
 
-.request_form input[type="submit"]:hover {
+.event_button.request_submit:hover {
   background-color: #be5758;
   outline: none;
 }
 
-.request_form input[type="submit"]:active {
+.event_button.request_submit:active {
   box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, .2);
   outline: none;
 }
 
+.giftform_imgwrap {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .29);
+}
+
+.giftform_img {
+  width: 100%;
+}
+
+.giftform_descript {
+  margin-top: 30px;
+}
+
+.giftform_price {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #be5758;
+  font-size: 36px;
+  line-height: 37px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.giftform_desctext {
+  padding-left: 0px;
+  color: #212121;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.giftform_val {
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.giftform_valcount {
+  padding-left: 10px;
+  color: #bf5a5c;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.giftform_select {
+  width: 100%;
+  height: 45px;
+  max-width: 200px;
+  border: 1px solid #e0e0e0;
+  color: #d3d3d3;
+  font-size: 13px;
+  background-image: none;
+  -webkit-appearance: none;
+    background-image: url('../images/select_img.png');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    cursor: pointer;
+    /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px; 
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+}
+ 
+select::-ms-expand {
+  display: none;
+}
+
+.giftform_sum {
+  margin-bottom: 35px;
+  text-align: right;
+}
+
+.giftform_sumtext {
+  color: #0d0d0d;
+  font-size: 16px;
+}
+
+.giftform_textform {
+  margin-bottom: 30px;
+  padding-left: 0px;
+  color: #242424;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.button.giftform_btn {
+  width: 222px;
+  height: 45px;
+  min-width: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  float: right;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.giftform_x {
+  font-size: 16px;
+  font-weight: 400;
+}
 
 @media (max-width: 1180px) {
   .menu_link {

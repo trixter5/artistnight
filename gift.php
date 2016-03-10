@@ -6,7 +6,7 @@
         <div class="w-hidden-small w-hidden-tiny gift_fake"></div>
         <div class="gift_text">
           <h1 class="gift_text--h1">Подарочная карта</h1>
-          <h2 class="gift_text--h2">сделайте приятно <br>своим близким</h2><a href="#" class="button button--buy gift_btn">Купить</a>
+          <h2 class="gift_text--h2">сделайте приятно <br>своим близким</h2><a href="giftform.php" class="button button--buy gift_btn">Купить</a>
         </div>
       </div>
     </main>
