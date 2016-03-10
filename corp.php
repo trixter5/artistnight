@@ -28,7 +28,7 @@
                 </ul>
               </div>
               <div class="corp_next">
-                <a href="#" class="w-inline-block corp_link">
+                <a href="request.php" class="w-inline-block corp_link">
                   <div class="corp_next--text">выбрать</div>
                 </a>
               </div>
@@ -53,7 +53,7 @@
                 </ul>
               </div>
               <div class="corp_next">
-                <a href="#" class="w-inline-block corp_link">
+                <a href="request.php" class="w-inline-block corp_link">
                   <div class="corp_next--text">выбрать</div>
                 </a>
               </div>
@@ -78,7 +78,7 @@
                 </ul>
               </div>
               <div class="corp_next">
-                <a href="#" class="w-inline-block corp_link">
+                <a href="request.php" class="w-inline-block corp_link">
                   <div class="corp_next--text">выбрать</div>
                 </a>
               </div>
