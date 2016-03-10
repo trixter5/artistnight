@@ -75,9 +75,10 @@ h2 {
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 25px;
   line-height: 30px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -107,7 +108,6 @@ h6 {
 p {
   margin-top: 5px;
   margin-bottom: 10px;
-  padding-left: 15px;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
   color: #000;
@@ -610,6 +610,16 @@ a {
   text-align: center;
 }
 
+.button:hover, input[type="submit"]:hover {
+  background-color: #be5758;
+  outline: none;
+}
+
+.button:active, input[type="submit"]:active {
+  box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, .2);
+  outline: none;
+}
+
 .loadmore_button {
   display: block;
   width: 185px;
@@ -627,10 +637,12 @@ a {
 
 .loadmore_button:hover {
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, .3);
+  background-color: #fff;
 }
 
 .loadmore_button:active {
   box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, .15);
+  background-color: #fff;
 }
 
 .blog_head {
@@ -670,7 +682,7 @@ a {
 }
 
 .feed_rait {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .item_rait {
@@ -1661,6 +1673,110 @@ select::-ms-expand {
   outline: none;
 }
 
+.giftform_imgwrap {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .29);
+}
+
+.giftform_img {
+  width: 100%;
+}
+
+.giftform_descript {
+  margin-top: 30px;
+}
+
+.giftform_price {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #be5758;
+  font-size: 36px;
+  line-height: 37px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.giftform_desctext {
+  padding-left: 0px;
+  color: #212121;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.giftform_val {
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.giftform_valcount {
+  padding-left: 10px;
+  color: #bf5a5c;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.giftform_select {
+  width: 100%;
+  height: 45px;
+  max-width: 200px;
+  border: 1px solid #e0e0e0;
+  color: #d3d3d3;
+  font-size: 13px;
+  background-image: none;
+  -webkit-appearance: none;
+    background-image: url('../images/select_img.png');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    cursor: pointer;
+    /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px; 
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+}
+ 
+select::-ms-expand {
+  display: none;
+}
+
+.giftform_sum {
+  margin-bottom: 35px;
+  text-align: right;
+}
+
+.giftform_sumtext {
+  color: #0d0d0d;
+  font-size: 16px;
+}
+
+.giftform_textform {
+  margin-bottom: 30px;
+  padding-left: 0px;
+  color: #242424;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.button.giftform_btn {
+  width: 222px;
+  height: 45px;
+  min-width: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  float: right;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.giftform_x {
+  font-size: 16px;
+  font-weight: 400;
+}
 
 @media (max-width: 1180px) {
   .menu_link {
