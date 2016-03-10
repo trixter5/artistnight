@@ -1,10 +1,3 @@
-/*!
- * Webflow: Front-end site library
- * @license MIT
- * Inline scripts may access the api using an async handler:
- *   var Webflow = Webflow || [];
- *   Webflow.push(readyFunction);
- */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -51,28 +44,30 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(4);
 	__webpack_require__(5);
 	__webpack_require__(6);
 	__webpack_require__(7);
 	__webpack_require__(8);
 	__webpack_require__(9);
-	__webpack_require__(1);
 	__webpack_require__(10);
 	__webpack_require__(11);
 	__webpack_require__(12);
+	__webpack_require__(1);
 	__webpack_require__(13);
 	__webpack_require__(14);
 	__webpack_require__(15);
 	__webpack_require__(16);
-	module.exports = __webpack_require__(17);
+	__webpack_require__(17);
+	__webpack_require__(18);
+	__webpack_require__(19);
+	module.exports = __webpack_require__(20);
 
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
 	/**
 	 * Webflow: Core site library
@@ -86,12 +81,11 @@
 	var $win = $(window);
 	var $doc = $(document);
 	var isFunction = $.isFunction;
-	var _ = Webflow._ = __webpack_require__(18);
+	var _ = Webflow._ = __webpack_require__(21);
 	var tram = __webpack_require__(3) && $.tram;
 	var domready = false;
 	var destroyed = false;
 	var Modernizr = window.Modernizr;
-	var noop = function() {};
 	tram.config.hideBackface = false;
 	tram.config.keepInherited = true;
 
@@ -187,11 +181,11 @@
 	  if (mode === 'preview') return inApp && !designFlag;
 	  if (mode === 'slug') return inApp && window.__wf_slug;
 	  if (mode === 'editor') return window.WebflowEditor;
-	  if (mode === 'test') return window.__wf_test;
+	  if (mode === 'test') return process.env.NODE_ENV === 'test' || window.__wf_test;
 	  if (mode === 'frame') return window !== window.top;
 	};
 
-	// Feature detects + browser sniffs  ಠ_ಠ
+	// Feature detects + browser sniffs  аІ _аІ 
 	var userAgent = navigator.userAgent.toLowerCase();
 	var appVersion = navigator.appVersion.toLowerCase();
 	var touch = Webflow.env.touch = ('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch;
@@ -370,6 +364,7 @@
 	// Export commonjs module
 	module.exports = window.Webflow = Webflow;
 
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
 /* 2 */
@@ -454,6 +449,166 @@
 
 /***/ },
 /* 4 */
+/***/ function(module, exports) {
+
+	// shim for using process in browser
+
+	var process = module.exports = {};
+	var queue = [];
+	var draining = false;
+	var currentQueue;
+	var queueIndex = -1;
+
+	function cleanUpNextTick() {
+	    draining = false;
+	    if (currentQueue.length) {
+	        queue = currentQueue.concat(queue);
+	    } else {
+	        queueIndex = -1;
+	    }
+	    if (queue.length) {
+	        drainQueue();
+	    }
+	}
+
+	function drainQueue() {
+	    if (draining) {
+	        return;
+	    }
+	    var timeout = setTimeout(cleanUpNextTick);
+	    draining = true;
+
+	    var len = queue.length;
+	    while(len) {
+	        currentQueue = queue;
+	        queue = [];
+	        while (++queueIndex < len) {
+	            if (currentQueue) {
+	                currentQueue[queueIndex].run();
+	            }
+	        }
+	        queueIndex = -1;
+	        len = queue.length;
+	    }
+	    currentQueue = null;
+	    draining = false;
+	    clearTimeout(timeout);
+	}
+
+	process.nextTick = function (fun) {
+	    var args = new Array(arguments.length - 1);
+	    if (arguments.length > 1) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            args[i - 1] = arguments[i];
+	        }
+	    }
+	    queue.push(new Item(fun, args));
+	    if (queue.length === 1 && !draining) {
+	        setTimeout(drainQueue, 0);
+	    }
+	};
+
+	// v8 likes predictible objects
+	function Item(fun, array) {
+	    this.fun = fun;
+	    this.array = array;
+	}
+	Item.prototype.run = function () {
+	    this.fun.apply(null, this.array);
+	};
+	process.title = 'browser';
+	process.browser = true;
+	process.env = {};
+	process.argv = [];
+	process.version = ''; // empty string to avoid regexp issues
+	process.versions = {};
+
+	function noop() {}
+
+	process.on = noop;
+	process.addListener = noop;
+	process.once = noop;
+	process.off = noop;
+	process.removeListener = noop;
+	process.removeAllListeners = noop;
+	process.emit = noop;
+
+	process.binding = function (name) {
+	    throw new Error('process.binding is not supported');
+	};
+
+	process.cwd = function () { return '/' };
+	process.chdir = function (dir) {
+	    throw new Error('process.chdir is not supported');
+	};
+	process.umask = function() { return 0; };
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	/**
+	 * Webflow: Background Video component
+	 */
+
+	var Webflow = __webpack_require__(1);
+
+	Webflow.define('backgroundVideo', module.exports = function ($, _) {
+	  var namespace = '.w-background-video';
+	  var doc = $(document);
+
+	  function ready () {
+	    var backgroundVideoNodes = $(document).find('.w-background-video');
+	    if (backgroundVideoNodes.length === 0) {
+	      return;
+	    }
+
+	    backgroundVideoNodes.each(function (_, node) {
+	      $(node).prepend(createVideoNode(node));
+	    });
+	  }
+
+	  function createVideoNode (nativeNode) {
+	    var nodeData = nativeNode.dataset;
+
+	    if (!nodeData.videoUrls) {
+	      return $('<video />');
+	    }
+
+	    // Prevent loading the videos on mobile browsers as its likely that they
+	    // are on low-bandwidth connections.
+	    if (Webflow.isMobile()) {
+	      return $('<video />').css('background-image', 'url(' + nodeData.posterUrl + ')');
+	    }
+
+	    var videoURLs = nodeData.videoUrls.split(',');
+	    var sourceNodes = videoURLs.map(function (url) {
+	      return $('<source />').attr({
+	        src: url,
+	        'data-wf-ignore': '',
+	      });
+	    });
+
+	    var videoNode = $('<video />').attr({
+	      autoplay: nodeData.autoplay,
+	      loop: nodeData.loop,
+	    })
+	    .css('background-image', 'url(' + nodeData.posterUrl + ')');
+
+	    videoNode.append(sourceNodes);
+
+	    return videoNode;
+	  }
+
+	  return { ready: ready };
+	});
+
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -533,7 +688,7 @@
 
 
 /***/ },
-/* 5 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -547,11 +702,11 @@
 
 	Webflow.define('dropdown', module.exports = function($, _) {
 	  var api = {};
-	  var tram = $.tram;
 	  var $doc = $(document);
 	  var $dropdowns;
 	  var designer;
 	  var inApp = Webflow.env();
+	  var touch = Webflow.env.touch;
 	  var namespace = '.w-dropdown';
 	  var stateOpen = 'w--open';
 	  var closeEvent = 'w-close' + namespace;
@@ -584,6 +739,7 @@
 	    data.links = data.list.children('.w-dropdown-link');
 	    data.outside = outside(data);
 	    data.complete = complete(data);
+	    data.leave = leave(data);
 
 	    // Remove old events
 	    $el.off(namespace);
@@ -601,6 +757,9 @@
 	      $el.on('setting' + namespace, handler(data));
 	    } else {
 	      data.toggle.on('tap' + namespace, toggle(data));
+	      if (data.config.hover) {
+	        data.toggle.on('mouseenter' + namespace, enter(data));
+	      }
 	      $el.on(closeEvent, handler(data));
 	      // Close in preview mode
 	      inApp && close(data);
@@ -609,8 +768,8 @@
 
 	  function configure(data) {
 	    data.config = {
-	      hover: +data.el.attr('data-hover'),
-	      delay: +data.el.attr('data-delay') || 0
+	      hover: Boolean(data.el.attr('data-hover')) && !touch,
+	      delay: Number(data.el.attr('data-delay')) || 0
 	    };
 	  }
 
@@ -632,12 +791,12 @@
 	  }
 
 	  function toggle(data) {
-	    return _.debounce(function(evt) {
+	    return _.debounce(function() {
 	      data.open ? close(data) : open(data);
 	    });
 	  }
 
-	  function open(data, immediate) {
+	  function open(data) {
 	    if (data.open) return;
 	    closeOthers(data);
 	    data.open = true;
@@ -648,6 +807,7 @@
 
 	    // Listen for tap outside events
 	    if (!designer) $doc.on('tap' + namespace, data.outside);
+	    if (data.hovering) data.el.on('mouseleave' + namespace, data.leave);
 
 	    // Clear previous delay
 	    window.clearTimeout(data.delayId);
@@ -655,12 +815,17 @@
 
 	  function close(data, immediate) {
 	    if (!data.open) return;
+
+	    // Do not close hover-based menus if currently hovering
+	    if (data.config.hover && data.hovering) return;
+
 	    data.open = false;
 	    var config = data.config;
 	    ix.outro(0, data.el[0]);
 
 	    // Stop listening for tap outside events
 	    $doc.off('tap' + namespace, data.outside);
+	    data.el.off('mouseleave' + namespace, data.leave);
 
 	    // Clear previous delay
 	    window.clearTimeout(data.delayId);
@@ -703,13 +868,27 @@
 	    };
 	  }
 
+	  function enter(data) {
+	    return function() {
+	      data.hovering = true;
+	      open(data);
+	    };
+	  }
+
+	  function leave(data) {
+	    return function() {
+	      data.hovering = false;
+	      close(data);
+	    };
+	  }
+
 	  // Export module
 	  return api;
 	});
 
 
 /***/ },
-/* 6 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -733,13 +912,21 @@
 
 	  var api = {};
 	  var $win = $(window);
+	  var $html = $(document.documentElement);
 	  var location = document.location;
 	  var hashchange = 'hashchange';
 	  var loaded;
 	  var loadEditor = options.load || load;
+	  var hasLocalStorage = false;
 
-	  // Check localStorage for editor data
-	  if (localStorage && localStorage.getItem && localStorage.getItem('WebflowEditor')) {
+	  try {
+	    // Check localStorage for editor data
+	    hasLocalStorage = localStorage && localStorage.getItem && localStorage.getItem('WebflowEditor');
+	  } catch (e) {
+	    // SecurityError: browser storage has been disabled
+	  }
+
+	  if (hasLocalStorage) {
 	    loadEditor();
 
 	  } else if (location.search) {
@@ -766,6 +953,7 @@
 	    $win.off(hashchange, checkHash);
 	    $.ajax({
 	      url: cleanSlashes(("https://editor-api.webflow.com") + '/api/editor/view'),
+	      data: { siteId: $html.attr('data-wf-site') },
 	      xhrFields: { withCredentials: true },
 	      dataType: 'json',
 	      crossDomain: true,
@@ -806,7 +994,26 @@
 
 
 /***/ },
-/* 7 */
+/* 9 */
+/***/ function(module, exports) {
+
+	/**
+	 * Returns a Boolean representing whether or not the client is a mobile browser.
+	 *
+	 * NOTE: Many thanks to detectmobilebrowsers.com for this user agent detection
+	 * regex, without which the mobile internet probably wouldn't exist.
+	 */
+	Webflow.isMobile = function () {
+	  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+	  return /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i
+	         .test(userAgent) ||
+	         /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i
+	         .test(userAgent.substr(0, 4));
+	}
+
+
+/***/ },
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -819,7 +1026,7 @@
 	  var api = {};
 
 	  // Cross-Domain AJAX for IE8
-	  __webpack_require__(19);
+	  __webpack_require__(22);
 
 	  var $doc = $(document);
 	  var $forms;
@@ -1101,7 +1308,7 @@
 
 
 /***/ },
-/* 8 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1137,10 +1344,11 @@
 
 
 /***/ },
-/* 9 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+	/*eslint no-self-compare:0 */
 
 	/**
 	 * Webflow: Interactions
@@ -1323,11 +1531,11 @@
 
 	  function convert(offset) {
 	    if (!offset) return 0;
-	    offset = offset + '';
+	    offset = String(offset);
 	    var result = parseInt(offset, 10);
 	    if (result !== result) return 0;
 	    if (offset.indexOf('%') > 0) {
-	      result = result / 100;
+	      result /= 100;
 	      if (result >= 1) result = 0.999;
 	    }
 	    return result;
@@ -1397,16 +1605,21 @@
 	      // Find selector within element descendants, siblings, or query whole document
 	      var selector = trigger.selector;
 	      if (selector) {
-	        $el = (
-	          trigger.descend ? $el.find(selector) :
-	          trigger.siblings ? $el.siblings(selector) :
-	          $(selector)
-	        );
+	        if (trigger.descend) {
+	          $el = $el.find(selector);
+	        } else if (trigger.siblings) {
+	          $el = $el.siblings(selector);
+	        } else {
+	          $el = $(selector);
+	        }
 	        if (inApp) $el.attr('data-ix-affect', 1);
 	      }
 
 	      // Apply empty fix for certain Chrome versions
 	      if (emptyFix) $el.addClass('w-ix-emptyfix');
+
+	      // Set preserve3d for triggers with transforms
+	      if (trigger.preserve3d) $el.css('transform-style', 'preserve-3d');
 	    }
 
 	    var _tram = tram($el);
@@ -1563,7 +1776,7 @@
 
 
 /***/ },
-/* 10 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1727,7 +1940,7 @@
 	    spinner.show();
 
 	    // For videos, load an empty SVG with the video dimensions to preserve
-	    // the video’s aspect ratio while being responsive.
+	    // the videoвЂ™s aspect ratio while being responsive.
 	    var url = item.html && svgDataUri(item.width, item.height) || item.url;
 	    loadImage(url, function ($image) {
 	      // Make sure this is the last item requested to be shown since
@@ -1878,12 +2091,12 @@
 	      lightbox.hide();
 	    }
 
-	    // [◀]
+	    // [в—Ђ]
 	    else if (keyCode === 37) {
 	      lightbox.prev();
 	    }
 
-	    // [▶]
+	    // [в–¶]
 	    else if (keyCode === 39) {
 	      lightbox.next();
 	    }
@@ -2230,7 +2443,7 @@
 
 
 /***/ },
-/* 11 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2342,7 +2555,7 @@
 
 
 /***/ },
-/* 12 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2566,7 +2779,7 @@
 
 
 /***/ },
-/* 13 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2912,7 +3125,7 @@
 
 
 /***/ },
-/* 14 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2928,7 +3141,7 @@
 	  var win = window;
 	  var loc = win.location;
 	  var history = inIframe() ? null : win.history;
-	  var validHash = /^[a-zA-Z][\w:.-]*$/;
+	  var validHash = /^[a-zA-Z0-9][\w:.-]*$/;
 
 	  function inIframe() {
 	    try {
@@ -2963,7 +3176,7 @@
 	      }
 
 	      // The href property always contains the full url so we can compare
-	      // with the document’s location to only target links on this page.
+	      // with the documentвЂ™s location to only target links on this page.
 	      var parts = this.href.split('#');
 	      var hash = parts[0] === locHref ? parts[1] : null;
 	      if (hash) {
@@ -2986,7 +3199,12 @@
 	    }
 
 	    // Push new history state
-	    if (loc.hash !== hash && history && history.pushState) {
+	    if (
+	      loc.hash !== hash &&
+	      history && history.pushState &&
+	      // Navigation breaks Chrome when the protocol is `file:`.
+	      !(Webflow.env.chrome && loc.protocol === 'file:')
+	    ) {
 	      var oldHash = history.state && history.state.hash;
 	      if (oldHash !== hash) {
 	        history.pushState({ hash: hash }, '', '#' + hash);
@@ -3065,7 +3283,7 @@
 
 
 /***/ },
-/* 15 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3575,7 +3793,7 @@
 
 
 /***/ },
-/* 16 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3767,8 +3985,15 @@
 
 	    // Fade in the new target
 	    function intro() {
-	      // Clear previous active class + inline style
-	      $previous.removeClass(tabActive).removeAttr('style');
+	      // Clear previous active class + styles touched by tram
+	      // We cannot remove the whole inline style because it could be dynamically bound
+	      $previous.removeClass(tabActive).css({
+	        opacity: '',
+	        transition: '',
+	        transform: '',
+	        width: '',
+	        height: ''
+	      });
 
 	      // Add active class to new target
 	      $targets.addClass(tabActive).each(ix.intro);
@@ -3792,7 +4017,7 @@
 
 
 /***/ },
-/* 17 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3836,7 +4061,7 @@
 	    el.addEventListener('mouseout', cancel, false);
 
 	    function start(evt) {
-	      // We don’t handle multi-touch events yet.
+	      // We donвЂ™t handle multi-touch events yet.
 	      var touches = evt.touches;
 	      if (touches && touches.length > 1) {
 	        return;
@@ -3934,7 +4159,7 @@
 
 
 /***/ },
-/* 18 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4294,7 +4519,7 @@
 
 
 /***/ },
-/* 19 */
+/* 22 */
 /***/ function(module, exports) {
 
 	/*!
@@ -4307,15 +4532,4 @@
 	module.exports=function($){if($.support.cors||!$.ajaxTransport||!window.XDomainRequest){return}var httpRegEx=/^https?:\/\//i;var getOrPostRegEx=/^get|post$/i;var sameSchemeRegEx=new RegExp("^"+location.protocol,"i");$.ajaxTransport("* text html xml json",function(options,userOptions,jqXHR){if(!options.crossDomain||!options.async||!getOrPostRegEx.test(options.type)||!httpRegEx.test(options.url)||!sameSchemeRegEx.test(options.url)){return}var xdr=null;return{send:function(headers,complete){var postData="";var userType=(userOptions.dataType||"").toLowerCase();xdr=new XDomainRequest;if(/^\d+$/.test(userOptions.timeout)){xdr.timeout=userOptions.timeout}xdr.ontimeout=function(){complete(500,"timeout")};xdr.onload=function(){var allResponseHeaders="Content-Length: "+xdr.responseText.length+"\r\nContent-Type: "+xdr.contentType;var status={code:200,message:"success"};var responses={text:xdr.responseText};try{if(userType==="html"||/text\/html/i.test(xdr.contentType)){responses.html=xdr.responseText}else if(userType==="json"||userType!=="text"&&/\/json/i.test(xdr.contentType)){try{responses.json=$.parseJSON(xdr.responseText)}catch(e){status.code=500;status.message="parseerror"}}else if(userType==="xml"||userType!=="text"&&/\/xml/i.test(xdr.contentType)){var doc=new ActiveXObject("Microsoft.XMLDOM");doc.async=false;try{doc.loadXML(xdr.responseText)}catch(e){doc=undefined}if(!doc||!doc.documentElement||doc.getElementsByTagName("parsererror").length){status.code=500;status.message="parseerror";throw"Invalid XML: "+xdr.responseText}responses.xml=doc}}catch(parseMessage){throw parseMessage}finally{complete(status.code,status.message,responses,allResponseHeaders)}};xdr.onprogress=function(){};xdr.onerror=function(){complete(500,"error",{text:xdr.responseText})};if(userOptions.data){postData=$.type(userOptions.data)==="string"?userOptions.data:$.param(userOptions.data)}xdr.open(options.type,options.url);xdr.send(postData)},abort:function(){if(xdr){xdr.abort()}}}})}(window.jQuery);
 
 /***/ }
-/******/ ]);/**
- * ----------------------------------------------------------------------
- * Webflow: Interactions: Init
- */
-Webflow.require('ix').init([
-  {"slug":"view","name":"view","value":{"style":{},"triggers":[{"type":"hover","loopA":true,"stepsA":[{"opacity":0,"transition":"transform 250ms ease-in-quad 0ms, opacity 250ms ease 0ms","x":"22px","y":"0px"},{"opacity":1,"transition":"transform 250ms ease-in-quad 0ms, opacity 250ms ease 0ms","x":"0px","y":"0px"}],"stepsB":[{"opacity":1,"transition":"transform 150ms ease 0ms, opacity 150ms ease 0ms","x":"0px","y":"0px"}]}]}},
-  {"slug":"soup","name":"soup","value":{"style":{},"triggers":[{"type":"hover","stepsA":[{"transition":"transform 250ms ease 0ms","scale":1.05}],"stepsB":[{"transition":"transform 250ms ease 0ms","scale":1}]}]}},
-  {"slug":"scroll","name":"scroll","value":{"style":{"opacity":0,"x":"0px","y":"60px"},"triggers":[{"type":"scroll","offsetBot":"25%","stepsA":[{"opacity":1,"transition":"transform 250ms ease-in-out 0ms, opacity 250ms ease-in-out 0ms","x":"0px","y":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 250ms ease-in-out 0ms, opacity 250ms ease-in-out 0ms","x":"0px","y":"60px"}]}]}},
-  {"slug":"scroll-2","name":"scroll 2","value":{"style":{"opacity":0,"x":"0px","y":"60px"},"triggers":[{"type":"scroll","offsetBot":"25%","stepsA":[{"wait":250},{"opacity":1,"transition":"transform 250ms ease-in-out 0ms, opacity 250ms ease-in-out 0ms","x":"0px","y":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 250ms ease-in-out 0ms, opacity 250ms ease-in-out 0ms","x":"0px","y":"60px"}]}]}},
-  {"slug":"scroll-3","name":"scroll 3","value":{"style":{"opacity":0,"x":"0px","y":"60px"},"triggers":[{"type":"scroll","offsetBot":"25%","stepsA":[{"wait":500},{"opacity":1,"transition":"transform 250ms ease-in-out 0ms, opacity 250ms ease-in-out 0ms","x":"0px","y":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 250ms ease-in-out 0ms, opacity 250ms ease-in-out 0ms","x":"0px","y":"60px"}]}]}},
-  {"slug":"load","name":"load","value":{"style":{"opacity":0,"scale":0.7},"triggers":[{"type":"load","stepsA":[{"wait":500},{"opacity":1,"transition":"transform 500ms ease-out-sine 0ms, opacity 500ms ease-out-sine 0ms","scale":1}],"stepsB":[]}]}}
-]);
+/******/ ]);
