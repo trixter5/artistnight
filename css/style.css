@@ -1054,6 +1054,8 @@ select::-ms-expand {
   color: #fff;
   font-size: 0.9em;
   line-height: 15px;
+  overflow: hidden;
+  max-height: 135px;
 }
 
 .event_button--stock {
