@@ -950,6 +950,7 @@ select::-ms-expand {
   bottom: -5px;
   overflow: hidden;
   max-height: 240px;
+  min-height: 200px;
   padding: 5%;
   background-image: url('../images/event_img.jpg');
   background-position: 50% 50%;
