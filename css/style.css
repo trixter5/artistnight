@@ -1815,6 +1815,95 @@ select::-ms-expand {
   margin: 20px auto;
 }
 
+/*datapicker*/
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+    background: #912b2b;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+}
+
+div#ui-datepicker-div {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: rgba(0,0,0,0.3) 0px 3px 1px;
+}
+
+select.ui-datepicker-month {
+    background: #912b2b;
+    border: none;
+    font-weight: normal !important;
+    font-size: 24px !important;
+    font-family: 'Fira Sans', sans serif !important;
+}
+
+span.ui-datepicker-year {
+    font-weight: normal;
+    font-size: 24px;
+    font-family: 'Fiara Sans', sans-serif;
+}
+
+th.ui-datepicker-week-end {
+}
+
+table.ui-datepicker-calendar thead {
+    background: #b23232;
+    color: #c4d2e4;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.ui-datepicker th {
+    font-weight: normal !important;
+}
+
+a.ui-state-default.ui-state-hover {
+    background: #9fb2cc !important;
+    color: #fff;
+    border: none;
+}
+
+a.ui-state-default {
+    text-align: center !important;
+    color: #4c4c4c;
+    background: transparent !important;
+    border: none !important;
+}
+
+td.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled {
+    color: #9A3D3D !important;
+}
+
+div#ui-datepicker-div:before {
+    width: 1px;
+    /* height: 0px; */
+    /* background: #912b2b; */
+    margin: 0 auto;
+    border: transparent 10px solid;
+    border-bottom: #912b2b 10px solid;
+    display: block;
+}
+
+span.ui-icon.ui-icon-circle-triangle-w {
+    background: none !important;
+    border: transparent 10px solid;
+    border-right: 10px solid #fff;
+    margin-left: 0px !important;
+    margin-top: -5px;
+}
+
+span.ui-icon.ui-icon-circle-triangle-e {
+    background: none !important;
+    border: transparent 10px solid;
+    border-left: 10px solid #fff;
+    margin-left: -20px !important;
+    margin-top: -5px;
+}
+/*datapicker end*/
+
 @media (max-width: 1180px) {
   .menu_link {
     padding-top: 30px;
