@@ -13,7 +13,15 @@
                 <form name="request" class="request_form">
                   <div class="w-row">
                     <div class="w-col w-col-6">
-                      <label for="name-4" class="request_label">Last Name*</label>
+                      <label for="name-4" class="request_label">Имя*</label>
+                    </div>
+                    <div class="w-col w-col-6">
+                      <input id="name-4" type="text" name="name" class="w-input request_input">
+                    </div>
+                  </div>
+                  <div class="w-row">
+                    <div class="w-col w-col-6">
+                      <label for="name-4" class="request_label">Фамилия*</label>
                     </div>
                     <div class="w-col w-col-6">
                       <input id="name-4" type="text" name="name" class="w-input request_input">
@@ -29,7 +37,7 @@
                   </div>
                   <div class="w-row">
                     <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">How did you hear about us?*</label>
+                      <label for="email-3" class="request_label">Откуда Вы о нас узнали?*</label>
                     </div>
                     <div class="w-col w-col-6">
                       <input id="name-4" type="text" name="name" class="w-input request_input">
@@ -37,7 +45,7 @@
                   </div>
                   <div class="w-row">
                     <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">Have you been to a Paint Nite before?*</label>
+                      <label for="email-3" class="request_label">Были ли Вы на Artistnight раньше?*</label>
                     </div>
                     <div class="w-col w-col-6">
                       <input id="name-4" type="text" name="name" class="w-input request_input">
@@ -45,7 +53,7 @@
                   </div>
                   <div class="w-row">
                     <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">Industry</label>
+                      <label for="email-3" class="request_label">Город*</label>
                     </div>
                     <div class="w-col w-col-6">
                       <input id="name-4" type="text" name="name" class="w-input request_input">
@@ -53,55 +61,7 @@
                   </div>
                   <div class="w-row">
                     <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">Company*</label>
-                    </div>
-                    <div class="w-col w-col-6">
-                      <input id="name-4" type="text" name="name" class="w-input request_input">
-                    </div>
-                  </div>
-                  <div class="w-row">
-                    <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">Occupation</label>
-                    </div>
-                    <div class="w-col w-col-6">
-                      <input id="name-4" type="text" name="name" class="w-input request_input">
-                    </div>
-                  </div>
-                  <div class="w-row">
-                    <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">Potential Event Date</label>
-                    </div>
-                    <div class="w-col w-col-6">
-                      <input id="name-4" type="text" name="name" class="w-input request_input">
-                    </div>
-                  </div>
-                  <div class="w-row">
-                    <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">MM/DD/YYYY</label>
-                    </div>
-                    <div class="w-col w-col-6">
-                      <input id="name-4" type="text" name="name" class="w-input request_input">
-                    </div>
-                  </div>
-                  <div class="w-row">
-                    <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">Estimated No. of Guests*</label>
-                    </div>
-                    <div class="w-col w-col-6">
-                      <input id="name-4" type="text" name="name" class="w-input request_input">
-                    </div>
-                  </div>
-                  <div class="w-row">
-                    <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">City*</label>
-                    </div>
-                    <div class="w-col w-col-6">
-                      <input id="name-4" type="text" name="name" class="w-input request_input">
-                    </div>
-                  </div>
-                  <div class="w-row">
-                    <div class="w-col w-col-6">
-                      <label for="email-3" class="request_label">State/Province*</label>
+                      <label for="email-3" class="request_label">Предполагаемая дата*</label>
                     </div>
                     <div class="w-col w-col-6">
                       <input id="name-4" type="text" name="name" class="w-input request_input">
@@ -126,7 +86,7 @@
                     <div class="request_cypher">1</div>
                   </div>
                   <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
-                    <p class="request_how--p">This is Photoshop's version &nbsp;of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum&nbsp;</p>
+                    <p class="request_how--p">Оставляете заявку на вечеринку</p>
                   </div>
                 </div>
               </div>
@@ -136,7 +96,7 @@
                     <div class="request_cypher">2</div>
                   </div>
                   <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
-                    <p class="request_how--p">This is Photoshop's version &nbsp;of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum&nbsp;</p>
+                    <p class="request_how--p">С вами связывается координатор</p>
                   </div>
                 </div>
               </div>
@@ -146,7 +106,7 @@
                     <div class="request_cypher">3</div>
                   </div>
                   <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
-                    <p class="request_how--p">This is Photoshop's version &nbsp;of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum&nbsp;</p>
+                    <p class="request_how--p">Назначаете дату и место</p>
                   </div>
                 </div>
               </div>
@@ -156,7 +116,7 @@
                     <div class="request_cypher">4</div>
                   </div>
                   <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
-                    <p class="request_how--p">This is Photoshop's version &nbsp;of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum&nbsp;</p>
+                    <p class="request_how--p">Приглашаете гостей</p>
                   </div>
                 </div>
               </div>
@@ -166,7 +126,7 @@
                     <div class="request_cypher">5</div>
                   </div>
                   <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
-                    <p class="request_how--p">This is Photoshop's version &nbsp;of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum&nbsp;</p>
+                    <p class="request_how--p">Рисуем. Пьем вино. Наслаждаемся жизнью.</p>
                   </div>
                 </div>
               </div>

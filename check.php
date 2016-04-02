@@ -46,7 +46,10 @@
                       <label for="checkbox-2" class="w-form-label check_formcheckboxlabel">This is Photoshop's version &nbsp;of Lorem Ipsum.</label>
                     </div>
                   </div>
-                  <input type="submit" value="оплатить"  class="button check_formsubmit">
+                  <div class="check_formgroup--submits">
+                  <input type="submit" value="оплатить сейчас"  class="button check_formsubmit check_formsubmit--now">
+                  <input type="submit" value="оплатить на месте"  class="button check_formsubmit">
+                  </div>
                 </form>
                 
               </div>
@@ -59,17 +62,17 @@
                 <div class="check_wraptotalline">
                   <div class="w-row">
                     <div class="w-col w-col-6">
-                      <div class="check_totaltext">Cart Total</div>
+                      <div class="check_totaltext">На сумму</div>
                     </div>
                     <div class="w-col w-col-6">
-                      <div class="check_totaltext check_totaltext--right">CAD 45.00</div>
+                      <div class="check_totaltext check_totaltext--right">345 РУБ.</div>
                     </div>
                   </div>
                 </div>
                 <div class="form check_couponwrap">
                   <form name="coupon" class="w-clearfix check_couponform">
-                    <input id="coupon" type="text" placeholder="Код купона" name="coupon" class="w-input check_couponinput">
-                    <input type="submit" value="принять" class="button check_couponsubmit">
+                    <input id="coupon" type="text" placeholder="Введите код" name="coupon" class="w-input check_couponinput">
+                    <input type="submit" value="Применить" class="button check_couponsubmit">
                   </form>
                   
                 </div>

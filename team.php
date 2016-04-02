@@ -11,6 +11,12 @@
             <div class="team_item">
               <h3 class="team_h3">Жора кардан</h3>
               <div class="team_who">Художник</div>
+               <div class="w-clearfix author_raiting">
+                        <div class="author_stars"></div>
+                        <div class="author_raitcount">
+                          <div class="author_raitcount--text">(5.546)</div>
+                        </div>
+              </div>
               <div class="team_imgwrap"><img src="images/team1.jpg" class="team_img">
               </div>
               <div class="team_par">
@@ -22,6 +28,12 @@
             <div class="team_item">
               <h3 class="team_h3">Жора кардан</h3>
               <div class="team_who">Художник</div>
+               <div class="w-clearfix author_raiting">
+                        <div class="author_stars"></div>
+                        <div class="author_raitcount">
+                          <div class="author_raitcount--text">(5.546)</div>
+                        </div>
+              </div>
               <div class="team_imgwrap"><img src="images/team2.jpg" class="team_img">
               </div>
               <div class="team_par">
@@ -33,6 +45,12 @@
             <div class="team_item">
               <h3 class="team_h3">Жора кардан</h3>
               <div class="team_who">Художник</div>
+               <div class="w-clearfix author_raiting">
+                        <div class="author_stars"></div>
+                        <div class="author_raitcount">
+                          <div class="author_raitcount--text">(5.546)</div>
+                        </div>
+              </div>
               <div class="team_imgwrap"><img src="images/team3.jpg" class="team_img">
               </div>
               <div class="team_par">
@@ -46,6 +64,12 @@
             <div class="team_item">
               <h3 class="team_h3">Жора кардан</h3>
               <div class="team_who">Художник</div>
+              <div class="w-clearfix author_raiting">
+                        <div class="author_stars"></div>
+                        <div class="author_raitcount">
+                          <div class="author_raitcount--text">(5.546)</div>
+                        </div>
+              </div>
               <div class="team_imgwrap"><img src="images/team1.jpg" class="team_img">
               </div>
               <div class="team_par">
@@ -57,6 +81,12 @@
             <div class="team_item">
               <h3 class="team_h3">Жора кардан</h3>
               <div class="team_who">Художник</div>
+               <div class="w-clearfix author_raiting">
+                        <div class="author_stars"></div>
+                        <div class="author_raitcount">
+                          <div class="author_raitcount--text">(5.546)</div>
+                        </div>
+              </div>
               <div class="team_imgwrap"><img src="images/team2.jpg" class="team_img">
               </div>
               <div class="team_par">
@@ -68,6 +98,12 @@
             <div class="team_item">
               <h3 class="team_h3">Жора кардан</h3>
               <div class="team_who">Художник</div>
+               <div class="w-clearfix author_raiting">
+                        <div class="author_stars"></div>
+                        <div class="author_raitcount">
+                          <div class="author_raitcount--text">(5.546)</div>
+                        </div>
+              </div>
               <div class="team_imgwrap"><img src="images/team3.jpg" class="team_img">
               </div>
               <div class="team_par">
@@ -75,6 +111,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="load_more"><a href="#" class="button loadmore_button">Загрузить еще</a>
         </div>
       </div>
     </main>

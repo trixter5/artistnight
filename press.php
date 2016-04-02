@@ -95,6 +95,8 @@
           </div>
         </div>
       </div>
+	   <div class="load_more"><a href="#" class="button loadmore_button">Загрузить еще</a>
+        </div>
     </main>
     
     <?php include("footer.php");?>

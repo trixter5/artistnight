@@ -33,7 +33,7 @@
             </form>
           </div>
         </div>
-        <div class="events">
+         <div class="events">
           <div class="w-row events_row">
             <div class="w-col w-col-3 w-col-medium-6">
               <div class="event">
@@ -48,9 +48,19 @@
                         <div class="event_date--c">23</div>
                         <div class="event_date--month">декабря</div>
                       </div>
+                      <div class="event_date--time">пн, 19:00</div>
                     </div>
                   </div>
                 </a>
+                <div class="w-clearfix event_place">
+                    <div class="w-inline-block event_place--mapicon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="w-inline-block event_place--address">
+                       <span class="event_place--place"> “Хлеб насущный” </span><br />
+                       <span class=""> Красная площадь, Ветошный переулок дом 9</span>
+                    </div>
+                </div>
                 <div class="w-clearfix event_author">
                   <div class="event_authorimgwrap">
                     <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
@@ -76,9 +86,19 @@
                         <div class="event_date--c">23</div>
                         <div class="event_date--month">декабря</div>
                       </div>
+                      <div class="event_date--time">пн, 19:00</div>
                     </div>
                   </div>
                 </a>
+                <div class="w-clearfix event_place">
+                    <div class="w-inline-block event_place--mapicon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="w-inline-block event_place--address">
+                       <span class="event_place--place"> “Хлеб насущный” </span><br />
+                       <span class=""> Красная площадь, Ветошный переулок дом 9</span>
+                    </div>
+                </div>
                 <div class="w-clearfix event_author">
                   <div class="event_authorimgwrap">
                     <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
@@ -104,9 +124,19 @@
                         <div class="event_date--c">23</div>
                         <div class="event_date--month">декабря</div>
                       </div>
+                      <div class="event_date--time">пн, 19:00</div>
                     </div>
                   </div>
                 </a>
+                <div class="w-clearfix event_place">
+                    <div class="w-inline-block event_place--mapicon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="w-inline-block event_place--address">
+                       <span class="event_place--place"> “Хлеб насущный” </span><br />
+                       <span class=""> Красная площадь, Ветошный переулок дом 9</span>
+                    </div>
+                </div>
                 <div class="w-clearfix event_author">
                   <div class="event_authorimgwrap">
                     <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
@@ -132,9 +162,19 @@
                         <div class="event_date--c">23</div>
                         <div class="event_date--month">декабря</div>
                       </div>
+                      <div class="event_date--time">пн, 19:00</div>
                     </div>
                   </div>
                 </a>
+                <div class="w-clearfix event_place">
+                    <div class="w-inline-block event_place--mapicon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="w-inline-block event_place--address">
+                       <span class="event_place--place"> “Хлеб насущный” </span><br />
+                       <span class=""> Красная площадь, Ветошный переулок дом 9</span>
+                    </div>
+                </div>
                 <div class="w-clearfix event_author">
                   <div class="event_authorimgwrap">
                     <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
@@ -162,9 +202,19 @@
                         <div class="event_date--c">23</div>
                         <div class="event_date--month">декабря</div>
                       </div>
+                      <div class="event_date--time">пн, 19:00</div>
                     </div>
                   </div>
                 </a>
+                <div class="w-clearfix event_place">
+                    <div class="w-inline-block event_place--mapicon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="w-inline-block event_place--address">
+                       <span class="event_place--place"> “Хлеб насущный” </span><br />
+                       <span class=""> Красная площадь, Ветошный переулок дом 9</span>
+                    </div>
+                </div>
                 <div class="w-clearfix event_author">
                   <div class="event_authorimgwrap">
                     <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
@@ -190,9 +240,19 @@
                         <div class="event_date--c">23</div>
                         <div class="event_date--month">декабря</div>
                       </div>
+                      <div class="event_date--time">пн, 19:00</div>
                     </div>
                   </div>
                 </a>
+                <div class="w-clearfix event_place">
+                    <div class="w-inline-block event_place--mapicon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="w-inline-block event_place--address">
+                       <span class="event_place--place"> “Хлеб насущный” </span><br />
+                       <span class=""> Красная площадь, Ветошный переулок дом 9</span>
+                    </div>
+                </div>
                 <div class="w-clearfix event_author">
                   <div class="event_authorimgwrap">
                     <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
@@ -218,9 +278,19 @@
                         <div class="event_date--c">23</div>
                         <div class="event_date--month">декабря</div>
                       </div>
+                      <div class="event_date--time">пн, 19:00</div>
                     </div>
                   </div>
                 </a>
+                <div class="w-clearfix event_place">
+                    <div class="w-inline-block event_place--mapicon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="w-inline-block event_place--address">
+                       <span class="event_place--place"> “Хлеб насущный” </span><br />
+                       <span class=""> Красная площадь, Ветошный переулок дом 9</span>
+                    </div>
+                </div>
                 <div class="w-clearfix event_author">
                   <div class="event_authorimgwrap">
                     <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">
@@ -246,9 +316,19 @@
                         <div class="event_date--c">23</div>
                         <div class="event_date--month">декабря</div>
                       </div>
+                      <div class="event_date--time">пн, 19:00</div>
                     </div>
                   </div>
                 </a>
+                <div class="w-clearfix event_place">
+                    <div class="w-inline-block event_place--mapicon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="w-inline-block event_place--address">
+                       <span class="event_place--place"> “Хлеб насущный” </span><br />
+                       <span class=""> Красная площадь, Ветошный переулок дом 9</span>
+                    </div>
+                </div>
                 <div class="w-clearfix event_author">
                   <div class="event_authorimgwrap">
                     <a href="author.php" class="w-inline-block even_authorlink"><img src="images/feed_who.png" class="event_author--img">

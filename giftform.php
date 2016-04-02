@@ -12,18 +12,19 @@
               <div class="giftform_imgwrap"><img src="images/gift_card.jpg" class="giftform_img">
               </div>
               <div class="giftform_descript">
-                <h3>Сертификат</h3>
+                <!-- <h3>Сертификат</h3>
                 <div class="giftform_price">USD 29.25</div>
                 <p class="giftform_desctext">Easy to Give. Easy to Use. Easy to Love.
                   <br>Give the gift of creativity! A Paint Nite gift ticket is redeemable
-                  <br>on our website for any single event.</p>
+                  <br>on our website for any single event.</p> -->
+                  <p>Здесь будет обратная сторона сертификата. </p>
               </div>
             </div>
           </div>
           <div class="w-col w-col-4 w-col-stack">
             <div class="check_right">
               <div class="request_head">
-                <h2 class="request_h1">35% скидка на карту</h2>
+                <h2 class="request_h1">50% скидка на карту</h2>
               </div>
               <div class="form">
                 <form name="girtform" class="w-clearfix">
@@ -38,16 +39,14 @@
                         </select>
                       </div>
                       <div class="w-col w-col-6">
-                        <div class="giftform_valcount"><span class="giftform_x">X</span> 29.25 USD</div>
+                        <div class="giftform_valcount"><span class="giftform_x">X</span> 2000 РУБ.</div>
                       </div>
                     </div>
                   </div>
                   <div class="giftform_sum">
-                    <div class="giftform_sumtext">Всего : 144 USD</div>
+                    <div class="giftform_sumtext">Всего : 2000 РУБ.</div>
                   </div>
-                  <p class="giftform_textform">Tickets are redeemable only in the selected location. US selection not redeemable in NYC
-                    <br>Each gift ticket is valid for one entry to selected event
-                    <br>Canadian tax will be applied at time of reservation</p>
+                  <p class="giftform_textform">Каждый подарочный билет может быть использован только один раз на мероприятии.</p>
                   <input type="submit" value="Заказать" class="button giftform_btn">
                 </form>
               </div>
